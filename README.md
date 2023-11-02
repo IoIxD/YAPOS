@@ -1,6 +1,6 @@
-# YAPOP
+# YAPOS
 
-YAPOP is a recreation of the UI on [https://plaza.one](https://plaza.one) that is built with Qt 4.1 as the only external dependency, meaning it can run on Windows 98/Me/2000/XP, Mac OS 10.2.8, Solaris 9, IRIX 6.5, AIX 5.1, and [any other platforms listed on this page](http://web.archive.org/web/20060126211419/http://www.trolltech.com/developer/platforms/)
+YAPOS is a recreation of the UI on [https://plaza.one](https://plaza.one) that is built with Qt 4.1 as the only external dependency, meaning it can run on Windows 98/Me/2000/XP, Mac OS 10.2.8, Solaris 9, IRIX 6.5, AIX 5.1, and [any other platforms listed on this page](http://web.archive.org/web/20060126211419/http://www.trolltech.com/developer/platforms/)
 
 # Building
 
