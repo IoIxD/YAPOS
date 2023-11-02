@@ -1,0 +1,153 @@
+<ui version="4.0" >
+ <author></author>
+ <comment></comment>
+ <exportmacro></exportmacro>
+ <class>PlazaOne</class>
+ <widget class="QMainWindow" name="PlazaOne" >
+  <property name="geometry" >
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>450</width>
+    <height>180</height>
+   </rect>
+  </property>
+  <property name="sizePolicy" >
+   <sizepolicy>
+    <hsizetype>0</hsizetype>
+    <vsizetype>0</vsizetype>
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="minimumSize" >
+   <size>
+    <width>450</width>
+    <height>180</height>
+   </size>
+  </property>
+  <property name="maximumSize" >
+   <size>
+    <width>450</width>
+    <height>180</height>
+   </size>
+  </property>
+  <property name="windowTitle" >
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget" >
+   <property name="enabled" >
+    <bool>true</bool>
+   </property>
+   <widget class="QGroupBox" name="inner" >
+    <property name="enabled" >
+     <bool>true</bool>
+    </property>
+    <property name="geometry" >
+     <rect>
+      <x>1</x>
+      <y>1</y>
+      <width>447</width>
+      <height>159</height>
+     </rect>
+    </property>
+    <property name="title" >
+     <string/>
+    </property>
+    <property name="alignment" >
+     <set>Qt::AlignLeading</set>
+    </property>
+    <property name="flat" >
+     <bool>false</bool>
+    </property>
+    <property name="checkable" >
+     <bool>false</bool>
+    </property>
+    <property name="checked" >
+     <bool>false</bool>
+    </property>
+    <widget class="QLabel" name="albumArt" >
+     <property name="geometry" >
+      <rect>
+       <x>8</x>
+       <y>8</y>
+       <width>112</width>
+       <height>112</height>
+      </rect>
+     </property>
+     <property name="frameShape" >
+      <enum>QFrame::Box</enum>
+     </property>
+     <property name="frameShadow" >
+      <enum>QFrame::Sunken</enum>
+     </property>
+     <property name="text" >
+      <string>Image</string>
+     </property>
+     <property name="textFormat" >
+      <enum>Qt::AutoText</enum>
+     </property>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar" >
+   <property name="enabled" >
+    <bool>true</bool>
+   </property>
+   <property name="geometry" >
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>450</width>
+     <height>19</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuPlayHistory" >
+    <property name="title" >
+     <string>Play History</string>
+    </property>
+   </widget>
+   <widget class="QMenu" name="menuAbout" >
+    <property name="title" >
+     <string>About</string>
+    </property>
+   </widget>
+   <widget class="QMenu" name="menuMobile" >
+    <property name="title" >
+     <string>Mobile</string>
+    </property>
+   </widget>
+   <widget class="QMenu" name="menuSupportUs" >
+    <property name="title" >
+     <string>Support Us</string>
+    </property>
+   </widget>
+   <widget class="QMenu" name="menuRatings" >
+    <property name="title" >
+     <string>Ratings</string>
+    </property>
+   </widget>
+   <addaction name="menuAbout" />
+   <addaction name="menuPlayHistory" />
+   <addaction name="menuRatings" />
+   <addaction name="menuSupportUs" />
+   <addaction name="menuMobile" />
+  </widget>
+  <widget class="QStatusBar" name="statusbar" >
+   <property name="enabled" >
+    <bool>false</bool>
+   </property>
+   <property name="geometry" >
+    <rect>
+     <x>0</x>
+     <y>161</y>
+     <width>450</width>
+     <height>19</height>
+    </rect>
+   </property>
+  </widget>
+ </widget>
+ <pixmapfunction></pixmapfunction>
+ <resources/>
+ <connections/>
+</ui>
