@@ -662,11 +662,9 @@ static char json_expect_str_char(json_ctx_t *ctx)
         break;
             JSON_ESCAPE_CHARACTERS_X
 #undef X
-        /*case 'u':
-            JSON_CTX_ERROR(
-                ctx,
-                "ghh_json does not support unicode escape sequences currently."
-                "\n");*/
+        case 'u':
+            ch = ctx->text[ctx->index];
+            break;
         default:
             JSON_CTX_ERROR(
                 ctx,
