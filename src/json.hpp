@@ -3,6 +3,7 @@
 #include "ghh_json.h"
 #include <iostream>
 #include <vector>
+#include <QString>
 
 class JSONObject
 {
@@ -11,6 +12,8 @@ private:
 
 public:
     JSONObject(json_object_t *);
+    JSONObject getObject(std::string key);
+    std::string serialize();
 };
 
 class JSON
@@ -22,7 +25,7 @@ public:
     JSON(std::string text);
     ~JSON();
     JSONObject getObject(std::string key);
-    std::string getString(std::string key);
+    QString getString(std::string key);
     double getNumber(std::string key);
     bool getBool(std::string key);
 };

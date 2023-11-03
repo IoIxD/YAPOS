@@ -1,12 +1,11 @@
 #include <QApplication>
 #include <QLabel>
 #include <QPixmap>
-#include "ui_main.h"
-#include "status.hpp"
+#include <QDebug>
+#include <QTimer>
 
-void getAndDisplayImage(QLabel *label)
-{
-}
+#include "ui_main.h"
+#include "updatethread.hpp"
 
 int main(int argc, char *argv[])
 {
@@ -15,9 +14,14 @@ int main(int argc, char *argv[])
     Ui::PlazaOne ui;
     ui.setupUi(&widget);
 
-    // Get the image and display it.
-    Status *status = new Status();
+    // Volume icon
+    QPixmap vol;
+    vol.load("./ui/vol.png");
+    ui.volumeIcon->setPixmap(vol);
 
     widget.show();
+
+    new UpdateThread(&app, &ui);
+
     return app.exec();
 }

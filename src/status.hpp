@@ -3,21 +3,30 @@
 #include <string>
 #include <QWidget>
 #include <QHttp>
+#include "time.h"
+
 #include "json.hpp"
+
 class Song
 {
+private:
+	JSON *obj;
+	time_t lastUpdated;
+	int positionVal;
+
 public:
-	std::string id;
-	std::string artist;
-	std::string title;
-	std::string album;
+	QString id() { return this->obj->getString("id"); }
+	QString artist() { return this->obj->getString("artist"); }
+	QString title() { return this->obj->getString("title"); }
+	QString album() { return this->obj->getString("album"); }
+	int length() { return (int)this->obj->getNumber("length"); }
+	QString artworkSource() { return this->obj->getString("artwork_src"); }
+	QString artworkSMSource() { return this->obj->getString("artwork_sm_src"); }
+	int reactions() { return (int)this->obj->getNumber("reactions"); }
 
-	int position;
-	int length;
+	int position(); // requires more then one line of code lmao
 
-	std::string artwork_src;
-	std::string artwork_sm_src;
-	int reactions;
+	Song(JSON *obj);
 };
 class Status : public QObject
 {
@@ -26,10 +35,7 @@ class Status : public QObject
 private:
 	QHttp *http;
 	JSON *json;
-	int listeners;
-	int updated_at;
-	Song song;
-	void update();
+	Song *songVal;
 
 public slots:
 	void onRequestFinished(int id, bool error);
@@ -39,6 +45,11 @@ public:
 
 	Status();
 	virtual ~Status(){};
+
+	void update();
+	int listeners();
+	int updatedAt();
+	Song *song();
 };
 
 #endif

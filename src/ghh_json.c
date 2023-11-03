@@ -591,7 +591,8 @@ static json_object_t *json_hmap_del(
     X('f', '\f')                 \
     X('n', '\n')                 \
     X('r', '\r')                 \
-    X('t', '\t')
+    X('t', '\t')                 \
+    X('u', '\a')
 
 static bool json_is_whitespace(char ch)
 {
@@ -662,9 +663,6 @@ static char json_expect_str_char(json_ctx_t *ctx)
         break;
             JSON_ESCAPE_CHARACTERS_X
 #undef X
-        case 'u':
-            ch = ctx->text[ctx->index];
-            break;
         default:
             JSON_CTX_ERROR(
                 ctx,
@@ -1006,7 +1004,6 @@ static void json_parse(json_t *json, const char *text)
 
 void json_load_empty(json_t *json)
 {
-    printf("j");
     json->root = NULL;
 
     // page allocator

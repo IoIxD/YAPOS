@@ -8,8 +8,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>450</width>
-    <height>180</height>
+    <width>443</width>
+    <height>175</height>
    </rect>
   </property>
   <property name="sizePolicy" >
@@ -22,55 +22,98 @@
   </property>
   <property name="minimumSize" >
    <size>
-    <width>450</width>
-    <height>180</height>
+    <width>443</width>
+    <height>175</height>
    </size>
   </property>
   <property name="maximumSize" >
    <size>
-    <width>450</width>
-    <height>180</height>
+    <width>443</width>
+    <height>175</height>
    </size>
   </property>
   <property name="windowTitle" >
-   <string>MainWindow</string>
+   <string>Nightwave Plaza</string>
   </property>
   <widget class="QWidget" name="centralwidget" >
    <property name="enabled" >
     <bool>true</bool>
    </property>
-   <widget class="QGroupBox" name="inner" >
-    <property name="enabled" >
-     <bool>true</bool>
-    </property>
+   <widget class="QFrame" name="frame" >
     <property name="geometry" >
      <rect>
-      <x>1</x>
-      <y>1</y>
-      <width>447</width>
-      <height>159</height>
+      <x>0</x>
+      <y>0</y>
+      <width>442</width>
+      <height>137</height>
      </rect>
     </property>
-    <property name="title" >
-     <string/>
+    <property name="frameShape" >
+     <enum>QFrame::Box</enum>
     </property>
-    <property name="alignment" >
-     <set>Qt::AlignLeading</set>
+    <property name="frameShadow" >
+     <enum>QFrame::Sunken</enum>
     </property>
-    <property name="flat" >
-     <bool>false</bool>
-    </property>
-    <property name="checkable" >
-     <bool>false</bool>
-    </property>
-    <property name="checked" >
-     <bool>false</bool>
-    </property>
+    <widget class="QPushButton" name="likeButton" >
+     <property name="geometry" >
+      <rect>
+       <x>243</x>
+       <y>101</y>
+       <width>56</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="text" >
+      <string>0</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="likeButton_2" >
+     <property name="geometry" >
+      <rect>
+       <x>306</x>
+       <y>101</y>
+       <width>64</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="text" >
+      <string></string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="likeButton_3" >
+     <property name="geometry" >
+      <rect>
+       <x>370</x>
+       <y>101</y>
+       <width>64</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="text" >
+      <string></string>
+     </property>
+    </widget>
+    <widget class="QSlider" name="horizontalSlider" >
+     <property name="geometry" >
+      <rect>
+       <x>308</x>
+       <y>62</y>
+       <width>100</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="value" >
+      <number>10</number>
+     </property>
+     <property name="orientation" >
+      <enum>Qt::Horizontal</enum>
+     </property>
+    </widget>
     <widget class="QLabel" name="albumArt" >
      <property name="geometry" >
       <rect>
        <x>8</x>
-       <y>8</y>
+       <y>12</y>
        <width>112</width>
        <height>112</height>
       </rect>
@@ -82,10 +125,120 @@
       <enum>QFrame::Sunken</enum>
      </property>
      <property name="text" >
-      <string>Image</string>
+      <string/>
      </property>
      <property name="textFormat" >
       <enum>Qt::AutoText</enum>
+     </property>
+    </widget>
+    <widget class="QLabel" name="volumeIcon" >
+     <property name="geometry" >
+      <rect>
+       <x>416</x>
+       <y>62</y>
+       <width>24</width>
+       <height>24</height>
+      </rect>
+     </property>
+     <property name="text" >
+      <string/>
+     </property>
+     <property name="pixmap" >
+      <pixmap>vol.png</pixmap>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="playButton" >
+     <property name="geometry" >
+      <rect>
+       <x>130</x>
+       <y>101</y>
+       <width>113</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="text" >
+      <string>Play</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="artistName" >
+     <property name="geometry" >
+      <rect>
+       <x>130</x>
+       <y>35</y>
+       <width>301</width>
+       <height>17</height>
+      </rect>
+     </property>
+     <property name="font" >
+      <font>
+       <family>MS Shell Dlg</family>
+       <pointsize>10</pointsize>
+       <weight>50</weight>
+       <italic>false</italic>
+       <bold>false</bold>
+       <underline>false</underline>
+       <strikeout>false</strikeout>
+      </font>
+     </property>
+     <property name="text" >
+      <string>Loading...</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="songTitle" >
+     <property name="geometry" >
+      <rect>
+       <x>130</x>
+       <y>12</y>
+       <width>311</width>
+       <height>17</height>
+      </rect>
+     </property>
+     <property name="font" >
+      <font>
+       <family>MS Shell Dlg</family>
+       <pointsize>10</pointsize>
+       <weight>75</weight>
+       <italic>false</italic>
+       <bold>true</bold>
+       <underline>false</underline>
+       <strikeout>false</strikeout>
+      </font>
+     </property>
+     <property name="text" >
+      <string>Loading...</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="timeRemaining" >
+     <property name="geometry" >
+      <rect>
+       <x>130</x>
+       <y>62</y>
+       <width>171</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="font" >
+      <font>
+       <family>MS Shell Dlg</family>
+       <pointsize>10</pointsize>
+       <weight>50</weight>
+       <italic>false</italic>
+       <bold>false</bold>
+       <underline>false</underline>
+       <strikeout>false</strikeout>
+      </font>
+     </property>
+     <property name="frameShape" >
+      <enum>QFrame::Box</enum>
+     </property>
+     <property name="frameShadow" >
+      <enum>QFrame::Sunken</enum>
+     </property>
+     <property name="text" >
+      <string>00:00 / 00:00</string>
+     </property>
+     <property name="alignment" >
+      <set>Qt::AlignCenter</set>
      </property>
     </widget>
    </widget>
@@ -98,23 +251,13 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>450</width>
+     <width>443</width>
      <height>19</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuPlayHistory" >
     <property name="title" >
      <string>Play History</string>
-    </property>
-   </widget>
-   <widget class="QMenu" name="menuAbout" >
-    <property name="title" >
-     <string>About</string>
-    </property>
-   </widget>
-   <widget class="QMenu" name="menuMobile" >
-    <property name="title" >
-     <string>Mobile</string>
     </property>
    </widget>
    <widget class="QMenu" name="menuSupportUs" >
@@ -125,6 +268,16 @@
    <widget class="QMenu" name="menuRatings" >
     <property name="title" >
      <string>Ratings</string>
+    </property>
+   </widget>
+   <widget class="QMenu" name="menuMobile" >
+    <property name="title" >
+     <string>Mobile</string>
+    </property>
+   </widget>
+   <widget class="QMenu" name="menuAbout" >
+    <property name="title" >
+     <string>About</string>
     </property>
    </widget>
    <addaction name="menuAbout" />
@@ -140,8 +293,8 @@
    <property name="geometry" >
     <rect>
      <x>0</x>
-     <y>161</y>
-     <width>450</width>
+     <y>156</y>
+     <width>443</width>
      <height>19</height>
     </rect>
    </property>

@@ -62,6 +62,9 @@
     "thread": "cpp",
     "cinttypes": "cpp",
     "typeinfo": "cpp",
-    "qhttp": "cpp"
+    "qhttp": "cpp",
+    "qwidget": "cpp",
+    "qpixmap": "cpp",
+    "*.moc": "cpp"
   }
 }

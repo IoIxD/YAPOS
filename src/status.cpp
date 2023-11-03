@@ -15,21 +15,51 @@ Status::Status()
         std::cout << "Failed to make a connection to http::requestFinished(int, bool)" << std::endl;
         exit(1);
     }
-    this->update();
-}
-
-void Status::update()
-{
-    QHttpRequestHeader header("GET", "/plazastatus.php");
-    header.setValue("Host", "ioi-xd.net");
-    this->http->request(header);
 }
 
 void Status::onRequestFinished(int id, bool error)
 {
     QByteArray arr = http->readAll();
-    std::cout << "finished. making json." << std::endl;
     this->json = new JSON(std::string(arr.constData(), arr.length()));
-    std::cout << "made json." << std::endl;
     this->ready = true;
+    JSONObject song = this->json->getObject("song");
+    this->songVal = new Song(new JSON(song.serialize()));
+}
+
+void Status::update()
+{
+    QHttpRequestHeader header("GET", "/plaza/status.php");
+    header.setValue("Host", "ioi-xd.net");
+    this->http->request(header);
+}
+
+int Status::listeners()
+{
+    return (int)this->json->getNumber("listeners");
+}
+int Status::updatedAt()
+{
+    return (int)this->json->getNumber("updated_at");
+}
+
+Song *Status::song()
+{
+    return this->songVal;
+}
+
+Song::Song(JSON *obj)
+{
+    this->obj = obj;
+    this->positionVal = (int)this->obj->getNumber("position");
+    time(&this->lastUpdated);
+}
+
+int Song::position()
+{
+    time_t now;
+    time(&now);
+
+    std::cout << now - this->lastUpdated << std::endl;
+
+    return this->positionVal + (now - this->lastUpdated);
 }
