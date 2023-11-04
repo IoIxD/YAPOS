@@ -4,9 +4,15 @@
             "name": "Linux",
             "includePath": [
                 "${workspaceFolder}/**",
+                "/usr/include/Qt*",
+                "/usr/include/Qt",
                 "/usr/include/QtGui",
                 "/usr/include/QtNetwork",
-                "/usr/include/QtCore"
+                "/usr/include/QtCore",
+                "/usr/include/QtXml",
+                "/usr/include/QtCore",
+                "/usr/include/QtCore",
+                "/usr/include/SDL"
             ],
             "defines": [],
             "compilerPath": "/usr/bin/clang",

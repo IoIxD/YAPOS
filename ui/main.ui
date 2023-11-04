@@ -93,22 +93,6 @@
       <string></string>
      </property>
     </widget>
-    <widget class="QSlider" name="horizontalSlider" >
-     <property name="geometry" >
-      <rect>
-       <x>308</x>
-       <y>62</y>
-       <width>100</width>
-       <height>23</height>
-      </rect>
-     </property>
-     <property name="value" >
-      <number>10</number>
-     </property>
-     <property name="orientation" >
-      <enum>Qt::Horizontal</enum>
-     </property>
-    </widget>
     <widget class="QLabel" name="albumArt" >
      <property name="geometry" >
       <rect>
@@ -147,19 +131,6 @@
       <pixmap>vol.png</pixmap>
      </property>
     </widget>
-    <widget class="QPushButton" name="playButton" >
-     <property name="geometry" >
-      <rect>
-       <x>130</x>
-       <y>101</y>
-       <width>113</width>
-       <height>23</height>
-      </rect>
-     </property>
-     <property name="text" >
-      <string>Play</string>
-     </property>
-    </widget>
     <widget class="QLabel" name="artistName" >
      <property name="geometry" >
       <rect>
@@ -176,30 +147,6 @@
        <weight>50</weight>
        <italic>false</italic>
        <bold>false</bold>
-       <underline>false</underline>
-       <strikeout>false</strikeout>
-      </font>
-     </property>
-     <property name="text" >
-      <string>Loading...</string>
-     </property>
-    </widget>
-    <widget class="QLabel" name="songTitle" >
-     <property name="geometry" >
-      <rect>
-       <x>130</x>
-       <y>12</y>
-       <width>311</width>
-       <height>17</height>
-      </rect>
-     </property>
-     <property name="font" >
-      <font>
-       <family>MS Shell Dlg</family>
-       <pointsize>10</pointsize>
-       <weight>75</weight>
-       <italic>false</italic>
-       <bold>true</bold>
        <underline>false</underline>
        <strikeout>false</strikeout>
       </font>
@@ -241,6 +188,62 @@
       <set>Qt::AlignCenter</set>
      </property>
     </widget>
+    <widget class="QPushButton" name="playButton" >
+     <property name="geometry" >
+      <rect>
+       <x>130</x>
+       <y>101</y>
+       <width>113</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="text" >
+      <string>Play</string>
+     </property>
+    </widget>
+    <widget class="QSlider" name="volumeSlider" >
+     <property name="geometry" >
+      <rect>
+       <x>308</x>
+       <y>62</y>
+       <width>100</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="value" >
+      <number>99</number>
+     </property>
+     <property name="sliderPosition" >
+      <number>99</number>
+     </property>
+     <property name="orientation" >
+      <enum>Qt::Horizontal</enum>
+     </property>
+    </widget>
+    <widget class="QLabel" name="songTitle" >
+     <property name="geometry" >
+      <rect>
+       <x>130</x>
+       <y>12</y>
+       <width>311</width>
+       <height>17</height>
+      </rect>
+     </property>
+     <property name="font" >
+      <font>
+       <family>MS Shell Dlg</family>
+       <pointsize>10</pointsize>
+       <weight>75</weight>
+       <italic>false</italic>
+       <bold>true</bold>
+       <underline>false</underline>
+       <strikeout>false</strikeout>
+      </font>
+     </property>
+     <property name="text" >
+      <string>Loading...</string>
+     </property>
+    </widget>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menubar" >
@@ -270,14 +273,14 @@
      <string>Ratings</string>
     </property>
    </widget>
-   <widget class="QMenu" name="menuMobile" >
-    <property name="title" >
-     <string>Mobile</string>
-    </property>
-   </widget>
    <widget class="QMenu" name="menuAbout" >
     <property name="title" >
      <string>About</string>
+    </property>
+   </widget>
+   <widget class="QMenu" name="menuMobile" >
+    <property name="title" >
+     <string>Mobile</string>
     </property>
    </widget>
    <addaction name="menuAbout" />

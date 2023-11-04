@@ -13,6 +13,6 @@ QT += network
 
 # Input
 FORMS = ui/main.ui
-SOURCES = src/ghh_json.c src/json.cpp src/updatethread.cpp src/filedownloader.cpp src/main.cpp src/status.cpp
+SOURCES = src/ffmpeg.cpp src/json/ghh_json.c src/json/json.cpp  src/updatethread.cpp src/filedownloader.cpp src/main.cpp src/status.cpp
 
 QMAKE_CFLAGS += -std=c99

@@ -5,7 +5,7 @@
 #include <QHttp>
 #include "time.h"
 
-#include "json.hpp"
+#include "json/json.hpp"
 
 class Song
 {

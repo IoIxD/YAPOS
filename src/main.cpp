@@ -7,6 +7,7 @@
 #include "ui_main.h"
 #include "updatethread.hpp"
 
+#include "ffmpeg.hpp"
 int main(int argc, char *argv[])
 {
     QApplication app(argc, argv);
@@ -22,6 +23,10 @@ int main(int argc, char *argv[])
     widget.show();
 
     new UpdateThread(&app, &ui);
+    FFMPEG *ff = new FFMPEG(&app, &ui, &widget);
 
-    return app.exec();
+    app.exec();
+
+    ff->stop();
+    return 0;
 }

@@ -58,8 +58,5 @@ int Song::position()
 {
     time_t now;
     time(&now);
-
-    std::cout << now - this->lastUpdated << std::endl;
-
     return this->positionVal + (now - this->lastUpdated);
 }
